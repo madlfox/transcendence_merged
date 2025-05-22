@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Sign-In</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <style>
+    .g_id_signin {
+      min-height: 60px;
+      display: block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Google Sign-In Test Page</h2>
+
+  <!-- Google Sign-In Button -->
+  <div class="g_id_signin"></div>
+
+  <pre id="tokenResult"></pre>
+  <pre id="serverResult"></pre>
+
+  <button onclick="getProfile()">Get Profile</button>
+  <pre id="profileResult"></pre>
+
+  <script>
+    let finalToken = '';
+
+    // ✅ Callback must be defined before Google SDK calls it
+    window.handleGoogleLogin = async function (response) {
+      const idToken = response.credential;
+      document.getElementById('tokenResult').textContent =
+        'Google ID Token:\n' + idToken;
+
+      const res = await fetch("/api/google-login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id_token: idToken }),
+      });
+
+      const result = await res.json();
+      document.getElementById('serverResult').textContent =
+        'Backend Response:\n' + JSON.stringify(result, null, 2);
+
+      if (result.token) {
+        finalToken = result.token;
+        localStorage.setItem("auth_token", finalToken);
+        // Optional: redirect after login
+        // window.location.href = "/profile";
+      } else {
+        alert("❌ Login failed or no token received.");
+      }
+    };
+
+    // ✅ Manual initialization of Google button
+    /*window.onload = function () {
+      if (window.google && google.accounts && google.accounts.id) {
+        google.accounts.id.initialize({
+          client_id: "533060755960-kfel2q1fm958u6ui38mooe5psojci4tr.apps.googleusercontent.com",
+          callback: handleGoogleLogin
+        });
+
+        google.accounts.id.renderButton(
+          document.querySelector(".g_id_signin"),
+          {
+            theme: "outline",
+            size: "large",
+            text: "sign_in_with",
+            shape: "rectangular"
+          }
+        );
+      }
+    };*/
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+  if (window.google && google.accounts && google.accounts.id) {
+    google.accounts.id.initialize({
+      client_id: "533060755960-kfel2q1fm958u6ui38mooe5psojci4tr.apps.googleusercontent.com",
+      callback: handleGoogleLogin
+    });
+
+    google.accounts.id.renderButton(
+      document.querySelector(".g_id_signin"),
+      {
+        theme: "outline",
+        size: "large",
+        text: "sign_in_with",
+        shape: "rectangular"
+      }
+    );
+  }
+});
+
+    async function getProfile() {
+      const res = await fetch("/api/profile", {
+        method: "GET",
+        headers: { Authorization: "Bearer " + finalToken },
+      });
+      const data = await res.json();
+      document.getElementById('profileResult').textContent =
+        'Protected /api/profile Response:\n' + JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+added:
+./html/googleSignIn.html
+./scripts/googleSignIn.js
+./scripts/GoogleSignIn.js
