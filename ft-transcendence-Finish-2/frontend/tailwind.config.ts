@@ -11,6 +11,9 @@ const config: Config = {
   theme: {
     extend: {},
   },
+  safelist: [
+    'selected'
+  ],
   plugins: [],
 };
 
