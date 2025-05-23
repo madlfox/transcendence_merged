@@ -93,7 +93,7 @@ export async function friends(): Promise<void> {
 
           // Create the profile picture img element
           const profilePic = document.createElement('img');
-          profilePic.src = user.profile_picture;
+          profilePic.src = user.profile_picture || 'static/assets/images/default.jpg';
           profilePic.alt = 'profile picture';
           profilePic.className = 'profile-pic-list';
           profilePic.id = 'avatar';
@@ -183,7 +183,7 @@ if (friends.length === 0) {
 
         // Profile picture
         const profilePic = document.createElement('img');
-        profilePic.src = friend.profile_picture;
+        profilePic.src = friend.profile_picture || 'static/assets/images/default.jpg';
         profilePic.alt = 'profile picture';
         profilePic.className = 'profile-pic-list';
 
@@ -196,6 +196,8 @@ if (friends.length === 0) {
         onlineStatus.className = 'online-icon-list ms-2';
 
         // Username
+
+
         const userName = document.createElement('p');
         userName.className = 'm-0 ms-2';
         userName.textContent = friend.username;

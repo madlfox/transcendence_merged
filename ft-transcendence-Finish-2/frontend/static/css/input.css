@@ -54,3 +54,8 @@
 .selected {
   @apply ring-2 ring-cyan-400 shadow-cyan-500/30;
 }
+
+
+html {
+  overflow-y: scroll;
+}
