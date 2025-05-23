@@ -8,22 +8,6 @@ export let eventListeners: Record<string, EventListener> = {};
 
 
 
-// export const gamestyleModalHTML = `
-// 	<div class="modal-header">
-// 		<h2 class="text-white text-2xl text-center w-full" data-translate="gamestyle"></h2>
-// 	</div>
-// 	<div class="modal-body">
-// 		<div class="flex justify-center gap-4 mt-4">
-// 			<button class="btn text-white bg-gray-700 hover:bg-gray-600 p-2 rounded-md" id="btnLegacy" data-translate="legacy">Legacy</button>
-// 			<button class="btn text-white bg-gray-700 hover:bg-gray-600 p-2 rounded-md" id="btnEnhanced" data-translate="enhanced">Enhanced</button>
-// 			<button class="btn text-white bg-gray-700 hover:bg-gray-600 p-2 rounded-md" id="btn3D" data-translate="3D">3D</button>
-// 		</div>
-// 		<div class="flex flex-col items-center mt-6">
-// 			<p class="text-white text-center" id="gamestyleDescription"></p>
-// 			<p class="text-white text-center" id="availableGamemodes"></p>
-// 		</div>
-// 	</div>
-// `;
 
 export const gamestyleModalHTML = `
   <div class="bg-black/40 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 w-full max-w-2xl mx-auto p-8">
@@ -80,127 +64,6 @@ export const gamestyleModalHTML = `
 
 
 
-// export const gamestyleModalHTML = `
-//  <div class="modal-header mb-4">
-//     <h2 class="text-3xl font-extrabold text-center w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 text-transparent bg-clip-text tracking-wide leading-tight" data-translate="gamestyle">
-//       gamestyle
-//     </h2>
-
-//   </div>
-//   <div class="modal-body">
-//     <div class="flex justify-center gap-4 mt-4">
-//       <button
-//         class="px-4 py-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 shadow-md shadow-indigo-700/20 relative overflow-hidden
-//                before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/10 before:to-transparent before:pointer-events-none
-//                hover:shadow-lg hover:shadow-indigo-400/40 hover:from-gray-600 hover:to-gray-700 transition-all duration-200
-//                font-semibold text-white"
-//         id="btnLegacy"
-//         data-translate="legacy"
-//       >
-//         Legacy
-//       </button>
-//       <button
-//         class="px-4 py-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 shadow-md shadow-indigo-700/20 relative overflow-hidden
-//                before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/10 before:to-transparent before:pointer-events-none
-//                hover:shadow-lg hover:shadow-indigo-400/40 hover:from-gray-600 hover:to-gray-700 transition-all duration-200
-//                font-semibold text-white"
-//         id="btnEnhanced"
-//         data-translate="enhanced"
-//       >
-//         Enhanced
-//       </button>
-//       <button
-//         class="px-4 py-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 shadow-md shadow-indigo-700/20 relative overflow-hidden
-//                before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/10 before:to-transparent before:pointer-events-none
-//                hover:shadow-lg hover:shadow-indigo-400/40 hover:from-gray-600 hover:to-gray-700 transition-all duration-200
-//                font-semibold text-white"
-//         id="btn3D"
-//         data-translate="3D"
-//       >
-//         3D
-//       </button>
-//     </div>
-//     <div class="flex flex-col items-center mt-6">
-//       <p class="text-white text-center" id="gamestyleDescription"></p>
-//       <p class="text-white text-center" id="availableGamemodes"></p>
-//     </div>
-// 	<p class="text-gray-400 text-sm text-center mt-4 italic" data-translate="PRESS_ESC">
-//       Press ESC to apply chosen settings
-//     </p>
-//   </div>
-// `;
-
-
-// export const gamemodeModalHTML = `
-// 	<div class="modal-header">
-// 		<h2 class="text-white text-2xl text-center w-full" data-translate="gamemode"></h2>
-// 	</div>
-// 	<div class="modal-body">
-// 		<div class="flex justify-center gap-4 mt-4">
-// 			<button class="btn text-white bg-gray-700 hover:bg-gray-600 p-2 rounded-md" id="btnPvp" data-translate="pvp">PvP</button>
-// 			<button class="btn text-white bg-gray-700 hover:bg-gray-600 p-2 rounded-md" id="btnAI" data-translate="vs ai">Vs AI</button>
-// 			<button class="btn text-white bg-gray-700 hover:bg-gray-600 p-2 rounded-md" id="btnTournament" data-translate="tournament">Tournament</button>
-// 		</div>
-// 		<div class="flex flex-col items-center mt-6">
-// 			<p class="text-white text-center mt-3" id="gamemodeDescription"></p>
-// 			<p class="text-white text-center font-bold mt-1" id="disclaimer"></p>
-// 			<div id="aiLevelsContainer"></div>
-// 		</div>
-// 	</div>
-// `;
-
-
-// export const gamemodeModalHTML = `
-//   <div class="modal-header mb-4 flex flex-col items-center">
-//     <p class="text-gray-400 text-sm italic mb-1" data-translate="PRESS_ESC">
-//       Press ESC to apply chosen settings
-//     </p>
-//     <h2 class="text-3xl font-extrabold text-center w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 text-transparent bg-clip-text tracking-wide leading-tight" data-translate="gamemode">
-//       gamemode
-//     </h2>
-//   </div>
-//   <div class="modal-body">
-//     <div class="flex justify-center gap-4 mt-4">
-//       <button
-//         class="px-4 py-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 shadow-md shadow-indigo-700/20 relative overflow-hidden
-//                before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/10 before:to-transparent before:pointer-events-none
-//                hover:shadow-lg hover:shadow-indigo-400/40 hover:from-gray-600 hover:to-gray-700 transition-all duration-200
-//                font-semibold text-white"
-//         id="btnPvp"
-//         data-translate="pvp"
-//       >
-//         PvP
-//       </button>
-//       <button
-//         class="px-4 py-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 shadow-md shadow-indigo-700/20 relative overflow-hidden
-//                before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/10 before:to-transparent before:pointer-events-none
-//                hover:shadow-lg hover:shadow-indigo-400/40 hover:from-gray-600 hover:to-gray-700 transition-all duration-200
-//                font-semibold text-white"
-//         id="btnAI"
-//         data-translate="vs ai"
-//       >
-//         Vs AI
-//       </button>
-//       <button
-//         class="px-4 py-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 shadow-md shadow-indigo-700/20 relative overflow-hidden
-//                before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/10 before:to-transparent before:pointer-events-none
-//                hover:shadow-lg hover:shadow-indigo-400/40 hover:from-gray-600 hover:to-gray-700 transition-all duration-200
-//                font-semibold text-white"
-//         id="btnTournament"
-//         data-translate="tournament"
-//       >
-//         Tournament
-//       </button>
-//     </div>
-//     <div class="flex flex-col items-center mt-6">
-//       <p class="text-white text-center mt-3" id="gamemodeDescription"></p>
-//       <p class="text-white text-center font-bold mt-1" id="disclaimer"></p>
-//       <div id="aiLevelsContainer"></div>
-//     </div>
-//   </div>
-// `;
-
-
 export const gamemodeModalHTML = `
   <div class="bg-black/40 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 w-full max-w-2xl mx-auto p-8">
     <div class="modal-header mb-4 flex flex-col items-center">
@@ -255,58 +118,6 @@ export const gamemodeModalHTML = `
 `;
 
 
-// export const gamemodeModalHTML = `
-//   <div class="modal-header mb-4 flex flex-col items-center">
-//     <h2 class="text-3xl font-extrabold text-center w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 text-transparent bg-clip-text tracking-wide leading-tight" data-translate="gamemode">
-//       gamemode
-//     </h2>
-   
-//   </div>
-//   <div class="modal-body">
-//     <div class="flex justify-center gap-4 mt-4">
-//       <button
-//         class="px-4 py-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 shadow-md shadow-indigo-700/20 relative overflow-hidden
-//                before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/10 before:to-transparent before:pointer-events-none
-//                hover:shadow-lg hover:shadow-indigo-400/40 hover:from-gray-600 hover:to-gray-700 transition-all duration-200
-//                font-semibold text-white"
-//         id="btnPvp"
-//         data-translate="pvp"
-//       >
-//         PvP
-//       </button>
-//       <button
-//         class="px-4 py-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 shadow-md shadow-indigo-700/20 relative overflow-hidden
-//                before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/10 before:to-transparent before:pointer-events-none
-//                hover:shadow-lg hover:shadow-indigo-400/40 hover:from-gray-600 hover:to-gray-700 transition-all duration-200
-//                font-semibold text-white"
-//         id="btnAI"
-//         data-translate="vs ai"
-//       >
-//         Vs AI
-//       </button>
-//       <button
-//         class="px-4 py-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 shadow-md shadow-indigo-700/20 relative overflow-hidden
-//                before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/10 before:to-transparent before:pointer-events-none
-//                hover:shadow-lg hover:shadow-indigo-400/40 hover:from-gray-600 hover:to-gray-700 transition-all duration-200
-//                font-semibold text-white"
-//         id="btnTournament"
-//         data-translate="tournament"
-//       >
-//         Tournament
-//       </button>
-//     </div>
-//     <div class="flex flex-col items-center mt-6">
-//       <p class="text-white text-center mt-3" id="gamemodeDescription"></p>
-//       <p class="text-white text-center font-bold mt-1" id="disclaimer"></p>
-//       <div id="aiLevelsContainer"></div>
-//     </div>
-// 	 <p class="text-gray-400 text-sm italic mt-1" data-translate="PRESS_ESC">
-//       Press ESC to apply chosen settings
-//     </p>
-//   </div>
-// `;
-
-
 
 
 export const playersContainerHTML = `
@@ -333,6 +144,7 @@ export const playerBoxHTML = `
 `;
 
 export const fourPlayersContainerHTML = `
+<div class="overflow-y-auto max-h-[60vh] w-full flex flex-col gap-2">
 	<!-- Player 1 -->
 	<div class="glass mt-2 p-4 flex flex-col items-center">
 		<p class="text-white text-xl mb-3" id="player1Name">player 1</p>
@@ -400,15 +212,14 @@ export const fourPlayersContainerHTML = `
 			class="mt-3" 
 			value="#ff00ff">
 	</div>
+	  </div>
 `;
 
 
-// export const aiLevelsHTML = `
-// 	<div class="flex justify-center gap-4 mt-4">
-// 		<button class="btn text-white bg-gray-700 hover:bg-gray-600 p-2 rounded-md" id="btnEasy" data-translate="easy">Easy</button>
-// 		<button class="btn text-white bg-gray-700 hover:bg-gray-600 p-2 rounded-md" id="btnHard" data-translate="hard">Hard</button>
-// 	</div>
-// `;
+   // ${fourPlayersContainerHTML}
+
+
+
 export const aiLevelsHTML = `
   <div class="flex justify-center gap-4 mt-4">
     <button
@@ -447,51 +258,6 @@ export function getPointsRangeHTML(objective = 5) {
 		</div>
 	`;
 }
-
-// export function getSettingsModalHTML(keybinds : any) {
-//   const safeValue = (val : any) => (val !== "" ? val : "none");
-//   // Helper to make key chip clickable
-//   const keyChip = (id : any, value : any) =>
-//     `<span id="${id}" class="inline-block min-w-[4.5rem] px-3 py-1 bg-gradient-to-r from-gray-900 to-gray-800 border border-white/20 rounded-lg shadow-sm text-white font-mono text-base cursor-pointer hover:ring-2 hover:ring-cyan-400 transition">
-//       ${safeValue(value)}
-//     </span>`;
-
-//   return `
-//     <div class="bg-black/40 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 w-full max-w-2xl mx-auto p-8">
-//       <div class="modal-header mb-4">
-//         <h2 class="text-3xl font-extrabold text-center w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 text-transparent bg-clip-text tracking-wide leading-tight" data-translate="keybinds-settings">
-//           keybind settings
-//         </h2>
-//       </div>
-//       <div class="modal-body flex flex-col items-center">
-//         <div class="w-full max-w-lg grid grid-cols-3 gap-x-6 gap-y-4 text-lg mb-6">
-//           <div></div>
-//           <div class="text-white text-center font-semibold" data-translate="left paddle">left paddle</div>
-//           <div class="text-white text-center font-semibold" data-translate="right paddle">right paddle</div>
-          
-//           <div class="text-right text-white pr-2" data-translate="move-up">move up</div>
-//           <div class="flex justify-center">${keyChip("lUp", keybinds.lUp)}</div>
-//           <div class="flex justify-center">${keyChip("rUp", keybinds.rUp)}</div>
-          
-//           <div class="text-right text-white pr-2" data-translate="move-down">move down</div>
-//           <div class="flex justify-center">${keyChip("lDown", keybinds.lDown)}</div>
-//           <div class="flex justify-center">${keyChip("rDown", keybinds.rDown)}</div>
-//         </div>
-//         <div class="w-full flex justify-center mt-2">
-//           <button
-//             id="resetToDefault"
-//             class="px-5 py-2 rounded-lg bg-gradient-to-r from-red-600 to-red-700 shadow-md shadow-red-900/20 relative overflow-hidden
-//               before:absolute before:inset-0 before:bg-gradient-to-br before:from-red-400/10 before:to-transparent before:pointer-events-none
-//               hover:shadow-lg hover:shadow-red-500/40 hover:from-red-500 hover:to-red-700 transition-all duration-200
-//               font-semibold text-white"
-//           >
-//             Reset to Default
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   `;
-// }
 
 export function getSettingsModalHTML(keybinds : any) {
   const safeValue = (val : any) => (val !== "" ? val : "none");
@@ -544,53 +310,6 @@ export function getSettingsModalHTML(keybinds : any) {
     </div>
   `;
 }
-
-
-// export function getSettingsModalHTML(keybinds : any) {
-//   const safeValue = (val : any) => (val !== "" ? val : "none");
-
-//   // Helper for key style chips
-//   const keyChip = (id : any, value : any) =>
-//     `<span id="${id}" class="inline-block px-3 py-1 bg-gradient-to-r from-gray-900 to-gray-800 border border-white/20 rounded-lg shadow-sm text-white font-mono text-base transition">
-//       ${safeValue(value)}
-//     </span>`;
-
-//   return `
-//     <div class="bg-black/40 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 w-full max-w-2xl mx-auto p-8">
-//       <div class="modal-header mb-4">
-//         <h2 class="text-3xl font-extrabold text-center w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 text-transparent bg-clip-text tracking-wide leading-tight" data-translate="keybinds-settings">
-//           keybind settings
-//         </h2>
-//       </div>
-//       <div class="modal-body flex flex-col items-center">
-//         <div class="w-full max-w-lg grid grid-cols-3 gap-x-6 gap-y-4 text-lg mb-6">
-//           <div></div>
-//           <div class="text-white text-center font-semibold" data-translate="left paddle">left paddle</div>
-//           <div class="text-white text-center font-semibold" data-translate="right paddle">right paddle</div>
-          
-//           <div class="text-right text-white pr-2" data-translate="move-up">move up</div>
-//           <div class="flex justify-center">${keyChip("lUp", keybinds.lUp)}</div>
-//           <div class="flex justify-center">${keyChip("rUp", keybinds.rUp)}</div>
-          
-//           <div class="text-right text-white pr-2" data-translate="move-down">move down</div>
-//           <div class="flex justify-center">${keyChip("lDown", keybinds.lDown)}</div>
-//           <div class="flex justify-center">${keyChip("rDown", keybinds.rDown)}</div>
-//         </div>
-//         <div class="w-full flex justify-center mt-2">
-//           <button
-//             id="resetToDefault"
-//             class="px-5 py-2 rounded-lg bg-gradient-to-r from-red-600 to-red-700 shadow-md shadow-red-900/20 relative overflow-hidden
-//               before:absolute before:inset-0 before:bg-gradient-to-br before:from-red-400/10 before:to-transparent before:pointer-events-none
-//               hover:shadow-lg hover:shadow-red-500/40 hover:from-red-500 hover:to-red-700 transition-all duration-200
-//               font-semibold text-white"
-//           >
-//             Reset to Default
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   `;
-// }
 
 
 //change 
